@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ASCII"?>
+<campus:Campus xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:campus="campus">
+  <wildlife xsi:type="campus:Duck" species="Mallard" quantity="50"/>
+  <wildlife xsi:type="campus:Goose" species="Canadian" quantity="30"/>
+  <wildlife xsi:type="campus:Swan" species="Black" quantity="3"/>
+  <wildlife xsi:type="campus:Swan" species="White" quantity="5"/>
+  <flora name="Carrot" quantity="5"/>
+  <flora name="Potato" quantity="8"/>
+  <flora name="Lettuce" quantity="2"/>
+</campus:Campus>

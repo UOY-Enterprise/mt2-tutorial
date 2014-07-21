@@ -1,0 +1,11 @@
+/* 
+	Merges edible models.
+
+	Models:
+		n models with alias FOOD (model name can be anything; metamodel is 'edible')
+		OUT model - resulting merged model ('edible')
+
+*/
+
+var edibleItems = new OUT!EdibleItems;
+edibleItems.items.addAll(FOOD!Item.all);

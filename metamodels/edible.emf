@@ -1,0 +1,11 @@
+@namespace(uri="edible", prefix="edible")
+package edible;
+
+class EdibleItems {
+	val Item[*] items;
+}
+
+class Item {
+	attr String name;
+	attr int quantity;
+}

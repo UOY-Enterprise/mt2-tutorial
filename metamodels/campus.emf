@@ -1,0 +1,54 @@
+@namespace(uri="campus", prefix="campus")
+package campus;
+
+class Campus {
+	val Person[*] faculty;
+	val Person[*] students;
+	val Department[*] departments;
+	val Building[*] buildings;
+	val Wildlife[*] wildlife;
+	val Flora[*] flora;
+}
+
+class Department {
+	attr String name;
+	ref Building[*] building;
+}
+
+class Building {
+	attr String name;
+}
+
+class Person {
+	attr String name;
+}
+
+abstract class Wildlife {
+	attr String species;
+	attr int quantity;
+}
+
+abstract class Bird extends Wildlife {
+	
+}
+
+class Duck extends Bird {
+	
+}
+
+class Goose extends Bird {
+	
+}
+
+class Swan extends Bird {
+	
+}
+
+class Fish extends Wildlife {
+	
+}
+
+class Flora {
+	attr String name;
+	attr int quantity;	
+}

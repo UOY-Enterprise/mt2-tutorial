@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ASCII"?>
+<recipe:RecipeBook xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:recipe="recipe">
+  <recipes name="Duck a l'Orange">
+    <ingredients item="//@items.1" quantity="1"/>
+    <ingredients item="//@items.2" quantity="1"/>
+  </recipes>
+  <recipes name="Duck Cassoulet">
+    <ingredients item="//@items.1" quantity="2"/>
+    <ingredients item="//@items.4" quantity="4"/>
+    <ingredients item="//@items.3" quantity="5"/>
+  </recipes>
+  <items name="Goose"/>
+  <items name="Duck"/>
+  <items name="Orange"/>
+  <items name="Carrot"/>
+  <items name="Potato"/>
+</recipe:RecipeBook>

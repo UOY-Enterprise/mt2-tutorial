@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="__ODwcBELEeSNqavSZ9fTFA" type="EcoreTools" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="__OGzwBELEeSNqavSZ9fTFA" type="1001">
+    <children xmi:type="notation:Node" xmi:id="__OHa0BELEeSNqavSZ9fTFA" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="__OHa0RELEeSNqavSZ9fTFA" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="__OHa0hELEeSNqavSZ9fTFA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="__OHa0xELEeSNqavSZ9fTFA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="__OHa1BELEeSNqavSZ9fTFA"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="__OIB4BELEeSNqavSZ9fTFA" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="__OIB4RELEeSNqavSZ9fTFA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="__OIB4hELEeSNqavSZ9fTFA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="__OIB4xELEeSNqavSZ9fTFA"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="__OGzwRELEeSNqavSZ9fTFA" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="edible.ecore#//EdibleItems"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="__OGzwhELEeSNqavSZ9fTFA" x="171" y="63"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="__OIB5BELEeSNqavSZ9fTFA" type="1001">
+    <children xmi:type="notation:Node" xmi:id="__OIo8BELEeSNqavSZ9fTFA" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="__OIo8RELEeSNqavSZ9fTFA" type="5001">
+      <children xmi:type="notation:Node" xmi:id="__OIo-RELEeSNqavSZ9fTFA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="edible.ecore#//Item/name"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="__OJQABELEeSNqavSZ9fTFA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="__OJQARELEeSNqavSZ9fTFA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="edible.ecore#//Item/quantity"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="__OJQAhELEeSNqavSZ9fTFA"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="__OIo8hELEeSNqavSZ9fTFA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="__OIo8xELEeSNqavSZ9fTFA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="__OIo9BELEeSNqavSZ9fTFA"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="__OIo9RELEeSNqavSZ9fTFA" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="__OIo9hELEeSNqavSZ9fTFA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="__OIo9xELEeSNqavSZ9fTFA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="__OIo-BELEeSNqavSZ9fTFA"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="__OIB5RELEeSNqavSZ9fTFA" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="edible.ecore#//Item"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="__OIB5hELEeSNqavSZ9fTFA" x="171" y="180"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="__ODwcRELEeSNqavSZ9fTFA"/>
+  <element xmi:type="ecore:EPackage" href="edible.ecore#/"/>
+  <edges xmi:type="notation:Edge" xmi:id="__OJ3EBELEeSNqavSZ9fTFA" type="3002" source="__OGzwBELEeSNqavSZ9fTFA" target="__OIB5BELEeSNqavSZ9fTFA">
+    <children xmi:type="notation:Node" xmi:id="__OJ3FBELEeSNqavSZ9fTFA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="__OJ3FRELEeSNqavSZ9fTFA" y="-26"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="__OJ3FhELEeSNqavSZ9fTFA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="__OJ3FxELEeSNqavSZ9fTFA" y="23"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="__OJ3ERELEeSNqavSZ9fTFA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="__OJ3EhELEeSNqavSZ9fTFA" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="edible.ecore#//EdibleItems/items"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="__OJ3ExELEeSNqavSZ9fTFA" points="[0, 0, 0, 60]$[0, -60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="__O6sEBELEeSNqavSZ9fTFA" id="(0.5,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="__O6sERELEeSNqavSZ9fTFA" id="(0.5,1.0)"/>
+  </edges>
+</notation:Diagram>

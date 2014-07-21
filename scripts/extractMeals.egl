@@ -1,0 +1,40 @@
+[%/* 
+	Selects recipes based on available food.
+
+	Models:
+		Recipe book
+		Edible food
+*/
+var book = RECIPE!RecipeBook.all.first();
+var rs = new Sequence;
+for (recipe in book.recipes) {
+	var canMake = true;
+	for (ingred in recipe.ingredients) {
+	
+		if (FOOD!Item.all.select(i | i.name == ingred.item.name and i.quantity >= ingred.quantity).size() == 0) {
+			canMake = false;
+			break;
+		}			
+	}
+	if (canMake) {
+		rs.add(recipe);
+	}
+}
+%]
+<html>
+<head>
+	<title>Recipes</title>
+</head>
+<body>
+[% if (rs.size() == 0) {%]
+	<p>Sorry, you don't have enough food to make a meal! Maybe you should go shopping!</p>
+[%} else {%]
+	<p>Available recipes:</p>
+	<ul>
+[%for (r in rs) {%]
+		<li>[%=r.name%]</li>
+[%}%]
+	</ul>
+[%}%]	
+</body>
+</html>

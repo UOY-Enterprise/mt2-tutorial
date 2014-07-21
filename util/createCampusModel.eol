@@ -1,0 +1,39 @@
+var campus = new Campus;
+
+
+var ducks = new Duck;
+ducks.species = "Mallard";
+ducks.quantity = 50;
+campus.wildlife.add(ducks);
+
+var geese = new Goose;
+geese.species = "Canadian";
+geese.quantity = 30;
+campus.wildlife.add(geese);
+
+var swans = new Swan;
+swans.species = "Black";
+swans.quantity = 3;
+campus.wildlife.add(swans);
+
+swans = new Swan;
+swans.species = "White";
+swans.quantity = 5;
+campus.wildlife.add(swans);
+
+
+var carrot = new Flora;
+carrot.name = "Carrot";
+carrot.quantity = 5;
+
+var potato = new Flora;
+potato.name = "Potato";
+potato.quantity = 8;
+
+var lettuce = new Flora;
+lettuce.name = "Lettuce";
+lettuce.quantity = 2;
+
+campus.flora.add(carrot);
+campus.flora.add(potato);
+campus.flora.add(lettuce);

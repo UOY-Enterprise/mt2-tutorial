@@ -1,0 +1,27 @@
+rule CampusToEdibleItems 
+	transform c : CAMPUS!Campus
+	to e : FOOD!EdibleItems {
+
+	e.items.addAll(c.wildlife.equivalents().flatten());
+	e.items.addAll(c.flora.equivalents().flatten());
+}
+
+@greedy
+rule WildlifeToEdible 
+	transform w : CAMPUS!Wildlife
+	to e : FOOD!Item {
+	
+	guard : not w.isTypeOf(CAMPUS!Swan)
+	
+	e.name := w.eClass.name;
+	e.quantity := w.quantity;
+}
+
+@lazy
+rule FloraToEdible 
+	transform f : CAMPUS!Flora
+	to e : FOOD!Item {
+	
+	e.name := f.name;
+	e.quantity := f.quantity;
+}

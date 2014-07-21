@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ASCII"?>
+<edible:EdibleItems xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:edible="edible">
+  <items name="Pot Noodle" quantity="5"/>
+  <items name="Milk" quantity="1"/>
+  <items name="Duck" quantity="50"/>
+  <items name="Goose" quantity="30"/>
+  <items name="Carrot" quantity="5"/>
+  <items name="Potato" quantity="8"/>
+  <items name="Lettuce" quantity="2"/>
+</edible:EdibleItems>

@@ -1,0 +1,11 @@
+var items = new EdibleItems;
+
+var potNoodle = new Item;
+potNoodle.name = "Pot Noodle";
+potNoodle.quantity = 5;
+items.items.add(potNoodle);
+
+var milk = new Item;
+milk.name = "Milk";
+milk.quantity = 1;
+items.items.add(milk);

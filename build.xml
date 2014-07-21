@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<project name="mt2-tutorial" basedir="." default="run">
+	
+	<target name="run">
+		<!-- Load models -->	
+		<epsilon.emf.register file="metamodels/campus.ecore"/>
+		<epsilon.emf.register file="metamodels/edible.ecore"/>
+		<epsilon.emf.register file="metamodels/recipe.ecore"/>
+		
+		<epsilon.emf.loadModel name="CAMPUS"
+		    modelFile="models/campus.model"
+		    metamodelUri="campus"
+	        read="true" store="false" />
+		
+		<epsilon.emf.loadModel name="RECIPE"
+		    modelFile="models/recipe.model"
+		    metamodelUri="recipe"
+	        read="true" store="false" />
+		
+		<epsilon.emf.loadModel name="CAMPUSEDIBLE"
+		    modelFile="models-gen/edible-campus.model"
+		    metamodelUri="edible"
+	        read="false" store="true" />
+		
+		<epsilon.emf.loadModel name="FRIDGE"
+			modelFile="models/fridge.model"
+		    metamodelUri="edible"
+	        read="true" store="false" />
+		
+		<epsilon.emf.loadModel name="MERGEDEDIBLE"
+			modelFile="models-gen/edible-merged.model"
+		    metamodelUri="edible"
+	        read="false" store="true" />
+		
+		<!-- Run the transformation chain -->
+		<epsilon.etl src="scripts/campusToEdible.etl" taskname="Campus to edible">
+			<model ref="CAMPUS" />
+			<model ref="CAMPUSEDIBLE" as="FOOD" />
+		</epsilon.etl>
+		
+		<epsilon.eol src="scripts/mergeItems.eol" taskname="Merge edible models">
+			<model ref="FRIDGE" alias="FOOD" />
+			<model ref="CAMPUSEDIBLE" alias="FOOD" />
+			<model ref="MERGEDEDIBLE" as="OUT" />
+		</epsilon.eol>
+		
+		<epsilon.egl src="scripts/extractMeals.egl" taskname="Select recipes" target="result.html">
+			<model ref="RECIPE" />
+			<model ref="MERGEDEDIBLE" as="FOOD" />
+		</epsilon.egl>
+		
+	</target>
+	
+</project>

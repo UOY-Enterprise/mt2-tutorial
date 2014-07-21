@@ -1,0 +1,58 @@
+var book = new RecipeBook;
+
+// Items
+var goose = new Item;
+goose.name  = "Goose";
+book.items.add(goose);
+
+var duck = new Item;
+duck.name  = "Duck";
+book.items.add(duck);
+
+var orange = new Item;
+orange.name  = "Orange";
+book.items.add(orange);
+
+var carrot = new Item;
+carrot.name  = "Carrot";
+book.items.add(carrot);
+
+var potato = new Item;
+potato.name  = "Potato";
+book.items.add(potato);
+
+// Recipe
+var duckAlOrange = new Recipe;
+duckAlOrange.name = "Duck a l'Orange";
+
+var duckIng = new Ingredient;
+duckIng.item = duck;
+duckIng.quantity = 1;
+duckAlOrange.ingredients.add(duckIng);
+
+var orangeIng = new Ingredient;
+orangeIng.item = orange;
+orangeIng.quantity = 1;
+duckAlOrange.ingredients.add(orangeIng);
+
+// Recipe
+var duckCassoulet = new Recipe;
+duckCassoulet.name = "Duck Cassoulet";
+
+var duckIng2 = new Ingredient;
+duckIng2.item = duck;
+duckIng2.quantity = 2;
+duckCassoulet.ingredients.add(duckIng2);
+
+var potsIng = new Ingredient;
+potsIng.item = potato;
+potsIng.quantity = 4;
+duckCassoulet.ingredients.add(potsIng);
+
+var carrotsIng = new Ingredient;
+carrotsIng.item = carrot;
+carrotsIng.quantity = 5;
+duckCassoulet.ingredients.add(carrotsIng);
+
+book.recipes.add(duckAlOrange);
+book.recipes.add(duckCassoulet);

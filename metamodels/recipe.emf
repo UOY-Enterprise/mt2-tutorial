@@ -1,0 +1,21 @@
+@namespace(uri="recipe", prefix="recipe")
+package recipe;
+
+class RecipeBook {
+	val Recipe[*] recipes;
+	val Item[*] items;
+}
+
+class Recipe {
+	attr String name;
+	val Ingredient[*] ingredients;
+}
+
+class Ingredient {
+	ref Item item;
+	attr int quantity;
+}
+
+class Item {
+	attr String name;
+}

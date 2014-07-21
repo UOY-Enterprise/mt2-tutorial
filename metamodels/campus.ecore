@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="campus" nsURI="campus" nsPrefix="campus">
+  <eClassifiers xsi:type="ecore:EClass" name="Campus">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="faculty" upperBound="-1"
+        eType="#//Person" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="students" upperBound="-1"
+        eType="#//Person" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="departments" upperBound="-1"
+        eType="#//Department" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="buildings" upperBound="-1"
+        eType="#//Building" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="wildlife" upperBound="-1"
+        eType="#//Wildlife" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="flora" upperBound="-1"
+        eType="#//Flora" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Department">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="building" upperBound="-1"
+        eType="#//Building"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Building">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Person">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Wildlife" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="species" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="quantity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Bird" abstract="true" eSuperTypes="#//Wildlife"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Duck" eSuperTypes="#//Bird"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Goose" eSuperTypes="#//Bird"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Swan" eSuperTypes="#//Bird"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Fish" eSuperTypes="#//Wildlife"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Flora">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="quantity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+</ecore:EPackage>
